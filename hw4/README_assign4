@@ -1,0 +1,14 @@
+
+This directory contains the Makefile and associated 
+flex and .c files needed to create the masm assembler.
+
+The Makefile is currently written to support the NRAND 
+and RSHIFT operators that we demonstrated in class.
+
+You must modify these files to add the new operators 
+(MULT and DIV) to the flex .ll file (and eliminate NRAND),
+and modify the .c compiler file so that it can generate
+code for the new operators, as shown in class.
+
+Use the Makefile to rebuild the masm, and then assemble the
+test files and run them against your new microcode.

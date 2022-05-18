@@ -1,0 +1,14 @@
+Found in: build/bin
+addint.o
+data_modifier.o
+data.o
+deref.o
+enable.o
+get_input_char.o
+main.o
+rbyswt.o
+readint.o
+write_char.o
+write_int.o
+write_string.o
+xbsywt.o

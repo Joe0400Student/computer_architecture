@@ -1,0 +1,99 @@
+Please enter a 1-5 digit number followed by enter           235
+Please enter a 1-5 digit number followed by enter           0
+THE SUM OF THESE INTEGERS IS:  235                          
+ProgramCounter : 0000000011000111  base 10:     199
+Accumulator    : 0000000000000000  base 10:       0
+InstructionReg : 1111111111111111  base 10:   65535
+TempInstr      : 1111111000000000  base 10:   65024
+StackPointer   : 0000100000000000  base 10:    2048
+ARegister      : 1111111111110101  base 10:   65525
+BRegister      : 1111111111111111  base 10:   65535
+CRegister      : 0000000000000000  base 10:       0
+DRegister      : 0011010100000000  base 10:   13568
+ERegister      : 0000000000000000  base 10:       0
+FRegister      : 0000000000000000  base 10:       0
+
+Total cycles   : 6346086
+
+Type decimal address to view memory,  q  to quit or  c  to continue: MIC-1 emulator finishing, goodbye
+q
+
+Please enter a 1-5 digit number followed by enter           16341
+Please enter a 1-5 digit number followed by enter           957
+THE SUM OF THESE INTEGERS IS:  17298                        
+ProgramCounter : 0000000011000111  base 10:     199
+Accumulator    : 0000000000000000  base 10:       0
+InstructionReg : 1111111111111111  base 10:   65535
+TempInstr      : 1111111000000000  base 10:   65024
+StackPointer   : 0000100000000000  base 10:    2048
+ARegister      : 1111111111110101  base 10:   65525
+BRegister      : 1111111111111111  base 10:   65535
+CRegister      : 0000000000000000  base 10:       0
+DRegister      : 0011100000000000  base 10:   14336
+ERegister      : 0000000000000000  base 10:       0
+FRegister      : 0000000000000000  base 10:       0
+
+Total cycles   : 1711496
+
+Type decimal address to view memory,  q  to quit or  c  to continue: MIC-1 emulator finishing, goodbye
+q
+
+Please enter a 1-5 digit number followed by enter           23786
+Please enter a 1-5 digit number followed by enter           12400
+THE SUM OF THESE INTEGERS IS: OVERFLOW, NO SUM IS POSSIBLE  
+ProgramCounter : 0000000011000111  base 10:     199
+Accumulator    : 0000000000000000  base 10:       0
+InstructionReg : 1111111111111111  base 10:   65535
+TempInstr      : 1111111000000000  base 10:   65024
+StackPointer   : 0000100000000000  base 10:    2048
+ARegister      : 1111111111110101  base 10:   65525
+BRegister      : 1111111111111111  base 10:   65535
+CRegister      : 0000000000000000  base 10:       0
+DRegister      : 0011000001110000  base 10:   12400
+ERegister      : 0000000000000000  base 10:       0
+FRegister      : 0000000000000000  base 10:       0
+
+Total cycles   : 593423
+
+Type decimal address to view memory,  q  to quit or  c  to continue: MIC-1 emulator finishing, goodbye
+q
+
+Please enter a 1-5 digit number followed by enter           12
+Please enter a 1-5 digit number followed by enter           23
+THE SUM OF THESE INTEGERS IS:   36                          
+ProgramCounter : 0000000011000111  base 10:     199
+Accumulator    : 0000000000000000  base 10:       0
+InstructionReg : 1111111111111111  base 10:   65535
+TempInstr      : 1111111000000000  base 10:   65024
+StackPointer   : 0000100000000000  base 10:    2048
+ARegister      : 1111111111110101  base 10:   65525
+BRegister      : 1111111111111111  base 10:   65535
+CRegister      : 0000000000000000  base 10:       0
+DRegister      : 0011011000000000  base 10:   13824
+ERegister      : 0000000000000000  base 10:       0
+FRegister      : 0000000000000000  base 10:       0
+
+Total cycles   : 693046
+
+Type decimal address to view memory,  q  to quit or  c  to continue: MIC-1 emulator finishing, goodbye
+q
+
+Please enter a 1-5 digit number followed by enter           1
+Please enter a 1-5 digit number followed by enter           1343
+THE SUM OF THESE INTEGERS IS:   1344                        
+ProgramCounter : 0000000011000111  base 10:     199
+Accumulator    : 0000000000000000  base 10:       0
+InstructionReg : 1111111111111111  base 10:   65535
+TempInstr      : 1111111000000000  base 10:   65024
+StackPointer   : 0000100000000000  base 10:    2048
+ARegister      : 1111111111110101  base 10:   65525
+BRegister      : 1111111111111111  base 10:   65535
+CRegister      : 0000000000000000  base 10:       0
+DRegister      : 0011010000000000  base 10:   13312
+ERegister      : 0000000000000000  base 10:       0
+FRegister      : 0000000000000000  base 10:       0
+
+Total cycles   : 826227
+
+Type decimal address to view memory,  q  to quit or  c  to continue: MIC-1 emulator finishing, goodbye
+

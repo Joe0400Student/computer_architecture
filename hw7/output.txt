@@ -1,0 +1,40 @@
+
+This is the Parent process report:
+
+PARENT PROG:  Process ID is:		26882
+PARENT PROC:  Process parent ID is:	22538
+PARENT PROC:  Real UID is:		24628
+PARENT PROC:  Real GID is:		2022
+PARENT PROC:  Effective UID is:		24628
+PARENT PROC:  Effective GID is:		2022
+PARENT PROC:  Process priority is:	0
+
+PARENT PROC: will now create child, write pipe,
+ and do a normal termination
+
+This is the Parent process report:
+
+PARENT PROG:  Process ID is:		26882
+PARENT PROC:  Process parent ID is:	22538
+PARENT PROC:  Real UID is:		24628
+PARENT PROC:  Real GID is:		2022
+PARENT PROC:  Effective UID is:		24628
+PARENT PROC:  Effective GID is:		2022
+PARENT PROC:  Process priority is:	0
+
+PARENT PROC: will now create child, write pipe,
+ and do a normal termination
+
+This is the CHILD process report:
+
+CHILD PROG:  Process ID is:		26883
+CHILD PROC:  Process parent ID is:	26882
+CHILD PROC:  Real UID is:		24628
+CHILD PROC:  Real GID is:		2022
+CHILD PROC:  Effective UID is:		24628
+CHILD PROC:  Effective GID is:		2022
+CHILD PROC:  Process priority is:	0
+CHILD PROC: parent's msg is 	this is the pipe message from the parent with PID 26882
+
+CHILD PROC: Process parent ID now is:   26882
+CHILD PROC: ### Goodbye ###

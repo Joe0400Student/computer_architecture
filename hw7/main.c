@@ -1,0 +1,158 @@
+//
+// Help file for cs305 Assignment 7
+//
+// This file has some code and many comments to 
+// direct you through assignment #7
+//
+
+
+
+// need these include files
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <errno.h>
+#include <stdlib.h>
+#include <sys/resource.h>
+
+// need just a main function, no args
+
+int main(void)
+{
+
+// some local variables 
+
+        pid_t   pid, ppid;
+        int     ruid, rgid, euid, egid;
+        int     priority;
+        char    msg_buf[100];
+        int     msg_pipe[2];
+
+// use the pipe() system call to create the pipe
+
+        if(pipe(msg_pipe) == -1){
+                perror("failed in Parent pipe creation:");
+                exit(7);
+        }
+
+// use various system calls to collect and print process details
+
+        printf("\nThis is the Parent process report:\n");
+        pid  = getpid();
+        ppid = getppid();
+        ruid = getuid();
+        euid = geteuid();
+        rgid = getgid();
+        egid = getegid();
+        priority = getpriority(PRIO_PROCESS, 0);
+
+        printf("\nPARENT PROG:  Process ID is:\t\t%d\n\
+PARENT PROC:  Process parent ID is:\t%d\n\
+PARENT PROC:  Real UID is:\t\t%d\n\
+PARENT PROC:  Real GID is:\t\t%d\n\
+PARENT PROC:  Effective UID is:\t\t%d\n\
+PARENT PROC:  Effective GID is:\t\t%d\n\
+PARENT PROC:  Process priority is:\t%d\n",
+	pid, ppid, ruid, rgid, euid, egid, priority);
+
+	printf("\nPARENT PROC: will now create child, write pipe,\n \
+and do a normal termination\n");
+// use the sprintf() call to build a message to write into the pipe
+// and dont forget to write the message into the pipe before parent exits
+//
+
+char arr[256];
+sprintf(arr,"\tthis is the pipe message from the parent with PID %d\n",pid);
+
+// now use the fork() call to create the child:
+//
+// format is:
+//
+ 	switch (pid = fork()){
+        case -1: // if the call failes
+		printf("cant make a fork! ");
+		exit(-1);
+	default:
+		write(msg_pipe[1],arr,100);
+		exit(0);
+	case 0:
+		        printf("\nThis is the CHILD process report:\n");
+        pid  = getpid();
+        ppid = getppid();
+        ruid = getuid();
+        euid = geteuid();
+        rgid = getgid();
+        egid = getegid();
+        priority = getpriority(PRIO_PROCESS, 0);
+
+        printf("\nCHILD PROG:  Process ID is:\t\t%d\n\
+CHILD PROC:  Process parent ID is:\t%d\n\
+CHILD PROC:  Real UID is:\t\t%d\n\
+CHILD PROC:  Real GID is:\t\t%d\n\
+CHILD PROC:  Effective UID is:\t\t%d\n\
+CHILD PROC:  Effective GID is:\t\t%d\n\
+CHILD PROC:  Process priority is:\t%d\n",
+        pid, ppid, ruid, rgid, euid, egid, priority);
+	
+//        default: // this is the parent's case  
+//                 // parent must write message to pipe and
+//                 // do a normal exit
+//
+//        case 0:  // this is the child's case
+//		   // child must create and print report
+//                 // child must read pipe message and print 
+//		   // a modified version of it to output
+//		   // child must do a normal exit
+
+                read(msg_pipe[0], msg_buf, 100);
+		
+		printf("CHILD PROC: parent's msg is %s\n", msg_buf);
+		printf("CHILD PROC: Process parent ID now is:   %d\n",
+                                                            getppid());
+		printf("CHILD PROC: ### Goodbye ###\n");
+		exit(0);
+		printf("somhow_got_here");
+		break;
+        } // switch and child end
+	exit(0);
+	return 0;
+}
+
+
+/********************************************************************
+This is a typical output from this assignment:
+
+
+This is the Parent process report:
+
+PARENT PROG:  Process ID is:            15550
+PARENT PROC:  Process parent ID is:     26778
+PARENT PROC:  Real UID is:              1004
+PARENT PROC:  Real GID is:              4000
+PARENT PROC:  Effective UID is:         1004
+PARENT PROC:  Effective GID is:         4000
+PARENT PROC:  Process priority is:      0
+
+PARENT PROC: will now create child, write pipe,
+ and do a normal termination
+
+This is the Child process report:
+
+CHILD PROC:  Process ID is:             15551
+CHILD PROC:  Process parent ID is:      15550
+CHILD PROC:  Real UID is:               1004
+CHILD PROC:  Real GID is:               4000
+CHILD PROC:  Effective UID is:          1004
+CHILD PROC:  Effective GID is:          4000
+CHILD PROC:  Process prioroty is:       0
+
+CHILD PROG: about to read pipe and report parent message:
+
+PARENT PROG: created Child with 15551 PID
+CHILD PROC: parent's msg is:
+      This is the pipe message from the parent with PID 15550
+
+CHILD PROC: Process parent ID now is:   1
+CHILD PROC: ### Goodbye ###
+*********************************************************************/

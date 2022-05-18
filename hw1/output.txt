@@ -1,0 +1,50 @@
+the floating value for 237.75 is broken out as:
+   mantissa: 0x6dc000   or:             110 1101 1100 0000 0000 0000 
+   exponent: 0x86       or:   1000 0110 
+       sign: 0x0        or: 0
+ in base 10: 237.75000  or: 0 1000 0110 110 1101 1100 0000 0000 0000 
+the floating value for -5.126e-07 is broken out as:
+   mantissa: 0x09999b   or:             000 1001 1001 1001 1001 1011 
+   exponent: 0x6a       or:   0110 1010 
+       sign: 0x1        or: 1
+ in base 10: -5.13e-07  or: 1 0110 1010 000 1001 1001 1001 1001 1011 
+the floating value for -9.24573e+07 is broken out as:
+   mantissa: 0x30592d   or:             011 0000 0101 1001 0010 1101 
+   exponent: 0x99       or:   1001 1001 
+       sign: 0x1        or: 1
+ in base 10: -9.25e+07  or: 1 1001 1001 011 0000 0101 1001 0010 1101 
+the floating value for 6.023e+23 is broken out as:
+   mantissa: 0x7f157f   or:             111 1111 0001 0101 0111 1111 
+   exponent: 0xcd       or:   1100 1101 
+       sign: 0x0        or: 0
+ in base 10: 6.02e+23   or: 0 1100 1101 111 1111 0001 0101 0111 1111 
+the floating value for 1.67339e-40 is broken out as:
+   mantissa: 0x01d279   or:             000 0001 1101 0010 0111 1001 
+   exponent: 0x00       or:   0000 0000 
+       sign: 0x0        or: 0
+ in base 10: 1.67e-40   or: 0 0000 0000 000 0001 1101 0010 0111 1001 
+the floating value for 0 is broken out as:
+   mantissa: 0x000000   or:             000 0000 0000 0000 0000 0000 
+   exponent: 0x00       or:   0000 0000 
+       sign: 0x0        or: 0
+ in base 10: 0.000000   or: 0 0000 0000 000 0000 0000 0000 0000 0000 
+the floating value for 1 is broken out as:
+   mantissa: 0x000000   or:             000 0000 0000 0000 0000 0000 
+   exponent: 0x7f       or:   0111 1111 
+       sign: 0x0        or: 0
+ in base 10: 1.000000   or: 0 0111 1111 000 0000 0000 0000 0000 0000 
+the floating value for 2 is broken out as:
+   mantissa: 0x000000   or:             000 0000 0000 0000 0000 0000 
+   exponent: 0x80       or:   1000 0000 
+       sign: 0x0        or: 0
+ in base 10: 2.000000   or: 0 1000 0000 000 0000 0000 0000 0000 0000 
+the floating value for 3 is broken out as:
+   mantissa: 0x400000   or:             100 0000 0000 0000 0000 0000 
+   exponent: 0x80       or:   1000 0000 
+       sign: 0x0        or: 0
+ in base 10: 3.000000   or: 0 1000 0000 100 0000 0000 0000 0000 0000 
+the floating value for 4 is broken out as:
+   mantissa: 0x000000   or:             000 0000 0000 0000 0000 0000 
+   exponent: 0x81       or:   1000 0001 
+       sign: 0x0        or: 0
+ in base 10: 4.000000   or: 0 1000 0001 000 0000 0000 0000 0000 0000 

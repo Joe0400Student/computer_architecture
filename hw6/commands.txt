@@ -1,0 +1,4 @@
+to make all files:
+	make
+to run it:
+	make run

@@ -1,0 +1,2 @@
+./mic1 prom_new.dat out.obj 0 2048
+Makefile:18: recipe for target 'run_source' failed

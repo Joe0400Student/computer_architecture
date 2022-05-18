@@ -1,0 +1,3 @@
+FOR DIV SEE div_ouptut.txt
+FOR MULT see mult_output.txt
+FOR RSHIFT see rshift_output.txt

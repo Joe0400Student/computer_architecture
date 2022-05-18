@@ -1,0 +1,15 @@
+to compile test_files:
+make compile_mul
+make compile_div
+make compile_rsh
+
+to compile microcode:
+make compile_source
+
+to run whatever assembler you just made
+make run_source
+
+to make compiler:
+make
+
+

@@ -1,0 +1,4 @@
+compile:
+        ./masm < fib.asm > fib.obj
+run:
+        ./mic1 prom.dat fib.obj 0 2048
